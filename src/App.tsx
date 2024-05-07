@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import PrivateRoute from "./components/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
-import Navbar from "./pages/Navbar";
 
 function App() {
   const isAllowed = localStorage.getItem('Token')
