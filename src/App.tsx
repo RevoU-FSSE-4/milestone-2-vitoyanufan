@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import PrivateRoute from "./components/PrivateRoute";
 import Dashboard from "./pages/Dashboard";
+import Navbar from "./pages/Navbar";
 
 function App() {
   const isAllowed = localStorage.getItem('Token')
@@ -12,6 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<Home />}></Route>
+
         <Route element={<PrivateRoute isAllowed={!!isAllowed as boolean} />}></Route>
         <Route path="/dashboard" element={<Dashboard />}> 
         </Route>
